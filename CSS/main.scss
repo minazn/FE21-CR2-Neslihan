@@ -4,11 +4,23 @@ $white-font-color: #F6F5F5;
 $grey-header-color: #C4C4C4;
 
 /*---------------------------------- stylings for every breakpoint -------------------------------*/
+#header{
+    background-color: $head-color;
+    display: flex;
+    justify-content: space-between;
+    padding: 4em;
+
+    #banner1{
+        max-width: 60%;
+    }
+}
+
 #navbar{
+    
     display: flex;
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 0 0 0 3em;
     max-width: 100%;
     background-color: $menu-color;
 
@@ -28,7 +40,6 @@ $grey-header-color: #C4C4C4;
 #date{
     display: flex;
     justify-content: flex-end;
-    margin: 2em 5em 0 0;
 }
 
 h3{
@@ -40,6 +51,8 @@ h3{
 
 
 .main{
+    margin-left: auto;
+    margin-right: auto;
     img{
         margin-bottom: -1em; /*otherwise there is a gap between img and text */
     }
@@ -77,20 +90,18 @@ a{
         }
     }
 }
-
+ /* for the other html files */
 .text{
     text-align: justify;
 }
 
 /*---------------------------------Smartphone-----------------------------------*/
+
 @media screen and (max-width: 480px){
 
-    #header{
-            #logo-newspaper{
-                width: 100%;
-                margin-left: auto;
-                margin-right: auto;
-            }
+    #header{ display: flex;
+            justify-content: center;
+            padding: 3em;
 
             #banner1{
                 display: none;
@@ -98,11 +109,12 @@ a{
         }
 
     #navbar{
+
+        padding: 0;
         li{
             width: 20%; /* for centering */
         }
     }
-
 
     .caption{
         text-align: center;
@@ -118,10 +130,6 @@ a{
 
     .main{
         width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-
-    
 
         h3{
             text-align: center;
@@ -133,7 +141,7 @@ a{
         }
     
         .img-row{
-            display: grid; /* I tried justify-content, but it didn't work, also tried with flex */
+            display: grid; /* I tried justify-content/justify-items, but it didn't work, same with align property*/
             width: 80%;
             margin-left: auto;
             margin-right: auto;
@@ -145,45 +153,117 @@ a{
 
     }
 
-    #footer{
+    #footer-flex{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
         img{
-            display: grid; 
-            width: 70%;
-            margin-left: auto;
-            margin-right: auto;
+            width: 60%;
         }
-
-
     }
     
 }
 
+/*---------------------------------Tablet-----------------------------------*/
+@media screen and (min-width:481px) and (max-width: 1259px){
+
+    #header{
+            padding: 4em 0 4em 1em;
+    }
+
+    #date{
+        margin-right: 2em;
+    }    
+    
+    .main{
+        width: 90%;
+
+        h3{
+            margin-top: 1em;
+        }
+
+        .img-row{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-row-gap: 2em;
+            
+            .mid-col{
+                display: flex;  /* If I flex the items in the grid and then the align-items property works. But the justify/align probertys
+                                should also work for grid items, shouldn't it? */
+                flex-direction: column;
+                align-items: flex-end;
+            }
+
+
+            img{
+                max-width: 90%;
+            }
+
+            .caption{
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                background-color: $menu-color;
+                color: $white-font-color;
+                width: 90%;
+                padding: 2em 0 2em 0;
+                margin: 0;
+            }
+        }
+    }
+
+    .img-row-medium{
+        display: grid;
+        grid-row-gap: 2em;
+
+        #snowden{
+            height: 67%;
+            max-width: 90%;
+        }
+    }
+
+    #footer-flex{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img{
+            width: 60%;
+            max-width: 30%;
+        }
+    }
+
+    .caption{
+        color: $white-font-color;
+        text-align: center;
+        padding-bottom: 3em;
+    }
+}
+
+
 /*---------------------------------Laptop-----------------------------------*/
 @media screen and (min-width: 1260px){
 
-    #header{
-        display: flex;
-        justify-content: space-between;
-        background-color: $head-color;
-        padding: 4em;
-
-    }
-
-    #navbar{
-        padding-left: 3em;
-    }
+#date{
+    margin: 2em 5em 0 0;
+}
 
     .main{
-
         width: 60%;
-        margin-left: auto;
-        margin-right: auto;
-
 
         .img-row{
             display: flex;
-            // justify-content: space-between; ------> This does not work; also tried: justify-items, justify-self and align property
+            // justify-content: space-between; ------> This does not work; also tried: justify-items, justify-self and align property, also with grid instead of flex
             margin-top: 2em;
+
+            .first-col{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
 
             .mid-col{
                 display: flex;

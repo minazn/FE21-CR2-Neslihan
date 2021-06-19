@@ -1,11 +1,26 @@
 /*---------------------------------- stylings for every breakpoint -------------------------------*/
+#header {
+  background-color: #5B1B1B;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 4em;
+}
+
+#header #banner1 {
+  max-width: 60%;
+}
+
 #navbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 3em;
   max-width: 100%;
   background-color: #0E0D0D;
 }
@@ -29,7 +44,6 @@
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  margin: 2em 5em 0 0;
 }
 
 h3 {
@@ -37,6 +51,11 @@ h3 {
   font-weight: normal;
   padding: 1em;
   margin-top: 3em;
+}
+
+.main {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .main img {
@@ -81,19 +100,27 @@ a {
   padding: 14px 16px;
 }
 
+/* for the other html files */
 .text {
   text-align: justify;
 }
 
 /*---------------------------------Smartphone-----------------------------------*/
 @media screen and (max-width: 480px) {
-  #header #logo-newspaper {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+  #header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 3em;
   }
   #header #banner1 {
     display: none;
+  }
+  #navbar {
+    padding: 0;
   }
   #navbar li {
     width: 20%;
@@ -111,8 +138,6 @@ a {
   }
   .main {
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
   }
   .main h3 {
     text-align: center;
@@ -124,7 +149,7 @@ a {
   .main .img-row {
     display: -ms-grid;
     display: grid;
-    /* I tried justify-content, but it didn't work, also tried with flex */
+    /* I tried justify-content/justify-items, but it didn't work, same with align property*/
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -132,40 +157,132 @@ a {
   .main #banner-3 {
     display: none;
   }
-  #footer img {
+  #footer-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #footer-flex img {
+    width: 60%;
+  }
+}
+
+/*---------------------------------Tablet-----------------------------------*/
+@media screen and (min-width: 481px) and (max-width: 1259px) {
+  #header {
+    padding: 4em 0 4em 1em;
+  }
+  #date {
+    margin-right: 2em;
+  }
+  .main {
+    width: 90%;
+  }
+  .main h3 {
+    margin-top: 1em;
+  }
+  .main .img-row {
     display: -ms-grid;
     display: grid;
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-row-gap: 2em;
+  }
+  .main .img-row .mid-col {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* If I flex the items in the grid and then the align-items property works. But the justify/align probertys
+                                should also work for grid items, shouldn't it? */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .main .img-row img {
+    max-width: 90%;
+  }
+  .main .img-row .caption {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    background-color: #0E0D0D;
+    color: #F6F5F5;
+    width: 90%;
+    padding: 2em 0 2em 0;
+    margin: 0;
+  }
+  .img-row-medium {
+    display: -ms-grid;
+    display: grid;
+    grid-row-gap: 2em;
+  }
+  .img-row-medium #snowden {
+    height: 67%;
+    max-width: 90%;
+  }
+  #footer-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #footer-flex img {
+    width: 60%;
+    max-width: 30%;
+  }
+  .caption {
+    color: #F6F5F5;
+    text-align: center;
+    padding-bottom: 3em;
   }
 }
 
 /*---------------------------------Laptop-----------------------------------*/
 @media screen and (min-width: 1260px) {
-  #header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    background-color: #5B1B1B;
-    padding: 4em;
-  }
-  #navbar {
-    padding-left: 3em;
+  #date {
+    margin: 2em 5em 0 0;
   }
   .main {
     width: 60%;
-    margin-left: auto;
-    margin-right: auto;
   }
   .main .img-row {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     margin-top: 2em;
+  }
+  .main .img-row .first-col {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .main .img-row .mid-col {
     display: -webkit-box;
