@@ -1,0 +1,227 @@
+$head-color: #5B1B1B;
+$menu-color: #0E0D0D;
+$white-font-color: #F6F5F5;
+$grey-header-color: #C4C4C4;
+
+/*---------------------------------- stylings for every breakpoint -------------------------------*/
+#navbar{
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    background-color: $menu-color;
+
+    li{
+        float: left;
+
+        a{
+            display: block;
+            color: $white-font-color;
+            text-align: center;
+            text-decoration: none;
+            padding: 14px 16px;
+        }
+    }
+}
+
+h3{
+    background-color: $grey-header-color;
+    font-weight: normal;
+    padding: 1em;
+    margin-top: 3em;
+}
+
+#date{
+    display: flex;
+    justify-content: flex-end;
+    margin: 2em 5em 0 0;
+}
+
+.main{
+    img{
+        margin-bottom: -1em; /*otherwise there is a gap between img and text */
+    }
+
+    #banner-3{
+        display:flex;
+        justify-content: center;
+        margin: 2em 0 3em 0;
+    }
+}
+
+#footer{
+    margin-top: 5em;
+    padding: 2em 0 0 0;
+    background-color: $menu-color;
+
+    #footer-link{
+        list-style-type: none;
+        padding: 0 0 1em 0;
+
+        li{
+            float: left;
+            
+            a{
+            display: block;
+            color: $white-font-color;
+            text-align: center;
+            text-decoration: none;
+            padding: 14px 16px;
+            }
+        }
+    }
+}
+
+/*---------------------------------Smartphone-----------------------------------*/
+@media screen and (max-width: 480px){
+
+    #header{
+            #logo-newspaper{
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            #banner1{
+                display: none;
+            }
+        }
+
+    #navbar{
+        li{
+            width: 20%; /* for centering */
+        }
+    }
+
+
+    .caption{
+        text-align: center;
+        background-color: $menu-color;
+        color: $white-font-color;
+        margin: 0;
+        padding: 3em 2em 3em 2em;
+    }
+
+    .main{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+
+        #date{
+            display: none;
+        }
+
+        h3{
+            text-align: center;
+        }
+        
+        img{
+            max-width: 100%;
+            margin-top: 2em;
+        }
+    
+        .img-row{
+            display: grid; /* I tried justify-content, but it didn't work, also tried with flex */
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #banner-3{
+            display: none;
+        }
+
+    }
+
+    #footer{
+        img{
+            display: grid; 
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+    }
+    
+}
+
+/*---------------------------------Laptop-----------------------------------*/
+@media screen and (min-width: 1260px){
+
+    #header{
+        display: flex;
+        justify-content: space-between;
+        background-color: $head-color;
+        padding: 4em;
+
+    }
+
+    #navbar{
+        padding-left: 3em;
+    }
+
+    .main{
+
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+
+
+        .img-row{
+            display: flex;
+            // justify-content: space-between; ------> This does not work; also tried: justify-items, justify-self and align property
+            margin-top: 2em;
+
+            .mid-col{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }            
+
+            .last-col{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+            }
+
+            img{
+                max-width: 80%;
+            }
+
+            .caption{
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                background-color: $menu-color;
+                color: $white-font-color;
+                width: 80%;
+                padding: 2em 0 2em 0;
+                margin: 0;
+            }
+
+            #musk{
+                height: 100%;
+            }
+
+            #snowden{
+                height: 100%;
+                max-width: 80%;
+            }
+        }
+    }
+
+    #footer-flex{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding: 0 4em 0 4em;
+    }
+
+    .caption{
+        color: $white-font-color;
+        text-align: center;
+        padding-bottom: 3em;
+    }
+}
