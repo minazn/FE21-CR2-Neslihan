@@ -1,0 +1,23 @@
+/*---------------------------------- stylings for every breakpoint -------------------------------*/
+#tech-big {
+  max-width: 100%;
+  margin-bottom: 2em;
+}
+
+.tech-img-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 2em;
+}
+
+.tech-img-row img {
+  max-width: 30%;
+}
+
+/*---------------------------------Smartphone-----------------------------------*/
+/*---------------------------------Laptop-----------------------------------*/
+/*# sourceMappingURL=tech.css.map */

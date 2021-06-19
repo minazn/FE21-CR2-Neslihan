@@ -22,13 +22,6 @@
   padding: 14px 16px;
 }
 
-h3 {
-  background-color: #C4C4C4;
-  font-weight: normal;
-  padding: 1em;
-  margin-top: 3em;
-}
-
 #date {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -39,12 +32,19 @@ h3 {
   margin: 2em 5em 0 0;
 }
 
+h3 {
+  background-color: #C4C4C4;
+  font-weight: normal;
+  padding: 1em;
+  margin-top: 3em;
+}
+
 .main img {
   margin-bottom: -1em;
   /*otherwise there is a gap between img and text */
 }
 
-.main #banner-3 {
+.main .center-img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -52,6 +52,11 @@ h3 {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 2em 0 3em 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 #footer {
@@ -73,8 +78,11 @@ h3 {
   display: block;
   color: #F6F5F5;
   text-align: center;
-  text-decoration: none;
   padding: 14px 16px;
+}
+
+.text {
+  text-align: justify;
 }
 
 /*---------------------------------Smartphone-----------------------------------*/
@@ -98,13 +106,13 @@ h3 {
     margin: 0;
     padding: 3em 2em 3em 2em;
   }
+  #date {
+    display: none;
+  }
   .main {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-  }
-  .main #date {
-    display: none;
   }
   .main h3 {
     text-align: center;

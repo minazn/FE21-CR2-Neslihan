@@ -25,6 +25,12 @@ $grey-header-color: #C4C4C4;
     }
 }
 
+#date{
+    display: flex;
+    justify-content: flex-end;
+    margin: 2em 5em 0 0;
+}
+
 h3{
     background-color: $grey-header-color;
     font-weight: normal;
@@ -32,22 +38,22 @@ h3{
     margin-top: 3em;
 }
 
-#date{
-    display: flex;
-    justify-content: flex-end;
-    margin: 2em 5em 0 0;
-}
 
 .main{
     img{
         margin-bottom: -1em; /*otherwise there is a gap between img and text */
     }
 
-    #banner-3{
+    .center-img{
         display:flex;
         justify-content: center;
         margin: 2em 0 3em 0;
     }
+}
+
+a{
+    text-decoration: none;
+    color: black;
 }
 
 #footer{
@@ -66,11 +72,14 @@ h3{
             display: block;
             color: $white-font-color;
             text-align: center;
-            text-decoration: none;
             padding: 14px 16px;
             }
         }
     }
+}
+
+.text{
+    text-align: justify;
 }
 
 /*---------------------------------Smartphone-----------------------------------*/
@@ -103,14 +112,16 @@ h3{
         padding: 3em 2em 3em 2em;
     }
 
+    #date{
+        display: none;
+    }
+
     .main{
         width: 100%;
         margin-left: auto;
         margin-right: auto;
 
-        #date{
-            display: none;
-        }
+    
 
         h3{
             text-align: center;
