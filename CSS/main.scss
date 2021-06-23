@@ -13,6 +13,10 @@ $grey-header-color: #C4C4C4;
     #banner1{
         max-width: 60%;
     }
+
+    #logo-newspaper{
+        max-height: 3em;
+    }
 }
 
 #navbar{
@@ -49,13 +53,17 @@ h3{
     margin-top: 3em;
 }
 
+#banner-3{
+    margin-top: 4em;
+}
+
 
 .main{
     margin-left: auto;
     margin-right: auto;
-    img{
-        margin-bottom: -1em; /*otherwise there is a gap between img and text */
-    }
+    // img{
+    //     margin-bottom: -1em; /*otherwise there is a gap between img and text */
+    // }
 
     .center-img{
         display:flex;
@@ -73,6 +81,10 @@ a{
     margin-top: 5em;
     padding: 2em 0 0 0;
     background-color: $menu-color;
+
+    img{
+        max-height: 3em;
+    }
 
     #footer-link{
         list-style-type: none;
@@ -162,12 +174,18 @@ a{
         img{
             width: 60%;
         }
+
+        ul{
+            li{
+                width: 20%;
+            }
+        }
     }
     
 }
 
 /*---------------------------------Tablet-----------------------------------*/
-@media screen and (min-width:481px) and (max-width: 1259px){
+@media screen and (min-width:481px) and (max-width: 1200px){
 
     #header{
             padding: 4em 0 4em 1em;
@@ -201,14 +219,18 @@ a{
                 max-width: 90%;
             }
 
+            .no-gap{
+                margin-bottom: -4pt;
+            }
+
             .caption{
                 display: flex;
                 justify-content: center;
-                text-align: center;
+                align-items: center;
                 background-color: $menu-color;
                 color: $white-font-color;
-                width: 90%;
-                padding: 2em 0 2em 0;
+                width: 80%;
+                padding: 5%;
                 margin: 0;
             }
         }
@@ -218,9 +240,12 @@ a{
         display: grid;
         grid-row-gap: 2em;
 
+        #move-down{
+            margin-top: 2pt;
+        }
+
         #snowden{
-            height: 67%;
-            max-width: 90%;
+            margin-top: 6%;
         }
     }
 
@@ -245,7 +270,7 @@ a{
 
 
 /*---------------------------------Laptop-----------------------------------*/
-@media screen and (min-width: 1260px){
+@media screen and (min-width: 1201px){
 
 #date{
     margin: 2em 5em 0 0;
@@ -258,6 +283,7 @@ a{
             display: flex;
             // justify-content: space-between; ------> This does not work; also tried: justify-items, justify-self and align property, also with grid instead of flex
             margin-top: 2em;
+            margin-bottom: 3em;
 
             .first-col{
                 display: flex;
@@ -278,29 +304,49 @@ a{
             }
 
             img{
-                max-width: 80%;
+                max-width: 90%;
+            }
+
+            .no-gap{
+                margin-bottom: -4pt;
             }
 
             .caption{
                 display: flex;
                 justify-content: center;
-                text-align: center;
+                align-items: center;
                 background-color: $menu-color;
                 color: $white-font-color;
                 width: 80%;
-                padding: 2em 0 2em 0;
-                margin: 0;
+                min-height:22%;
+                padding: 5%;
+                margin:0;
             }
 
             #musk{
-                height: 100%;
+                min-height: 76%;
             }
 
-            #snowden{
-                height: 100%;
-                max-width: 80%;
-            }
         }
+
+
+    .img-row-medium{
+        display: grid;
+        grid-row-gap: 2em;
+
+        #move-down{
+            margin-top: 2pt;
+        }
+
+        #snowden{
+            max-width: 94%;
+            min-height: 78%;
+        }
+
+        #snowden-caption{
+            width: 84%;
+        }
+    }
     }
 
     #footer-flex{

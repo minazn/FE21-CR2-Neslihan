@@ -14,6 +14,10 @@
   max-width: 60%;
 }
 
+#header #logo-newspaper {
+  max-height: 3em;
+}
+
 #navbar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -53,14 +57,13 @@ h3 {
   margin-top: 3em;
 }
 
+#banner-3 {
+  margin-top: 4em;
+}
+
 .main {
   margin-left: auto;
   margin-right: auto;
-}
-
-.main img {
-  margin-bottom: -1em;
-  /*otherwise there is a gap between img and text */
 }
 
 .main .center-img {
@@ -82,6 +85,10 @@ a {
   margin-top: 5em;
   padding: 2em 0 0 0;
   background-color: #0E0D0D;
+}
+
+#footer img {
+  max-height: 3em;
 }
 
 #footer #footer-link {
@@ -172,10 +179,13 @@ a {
   #footer-flex img {
     width: 60%;
   }
+  #footer-flex ul li {
+    width: 20%;
+  }
 }
 
 /*---------------------------------Tablet-----------------------------------*/
-@media screen and (min-width: 481px) and (max-width: 1259px) {
+@media screen and (min-width: 481px) and (max-width: 1200px) {
   #header {
     padding: 4em 0 4em 1em;
   }
@@ -212,6 +222,9 @@ a {
   .main .img-row img {
     max-width: 90%;
   }
+  .main .img-row .no-gap {
+    margin-bottom: -4pt;
+  }
   .main .img-row .caption {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -219,11 +232,13 @@ a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     background-color: #0E0D0D;
     color: #F6F5F5;
-    width: 90%;
-    padding: 2em 0 2em 0;
+    width: 80%;
+    padding: 5%;
     margin: 0;
   }
   .img-row-medium {
@@ -231,9 +246,11 @@ a {
     display: grid;
     grid-row-gap: 2em;
   }
+  .img-row-medium #move-down {
+    margin-top: 2pt;
+  }
   .img-row-medium #snowden {
-    height: 67%;
-    max-width: 90%;
+    margin-top: 6%;
   }
   #footer-flex {
     display: -webkit-box;
@@ -259,7 +276,7 @@ a {
 }
 
 /*---------------------------------Laptop-----------------------------------*/
-@media screen and (min-width: 1260px) {
+@media screen and (min-width: 1201px) {
   #date {
     margin: 2em 5em 0 0;
   }
@@ -271,6 +288,7 @@ a {
     display: -ms-flexbox;
     display: flex;
     margin-top: 2em;
+    margin-bottom: 3em;
   }
   .main .img-row .first-col {
     display: -webkit-box;
@@ -309,7 +327,10 @@ a {
             align-items: flex-end;
   }
   .main .img-row img {
-    max-width: 80%;
+    max-width: 90%;
+  }
+  .main .img-row .no-gap {
+    margin-bottom: -4pt;
   }
   .main .img-row .caption {
     display: -webkit-box;
@@ -318,19 +339,33 @@ a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     background-color: #0E0D0D;
     color: #F6F5F5;
     width: 80%;
-    padding: 2em 0 2em 0;
+    min-height: 22%;
+    padding: 5%;
     margin: 0;
   }
   .main .img-row #musk {
-    height: 100%;
+    min-height: 76%;
   }
-  .main .img-row #snowden {
-    height: 100%;
-    max-width: 80%;
+  .main .img-row-medium {
+    display: -ms-grid;
+    display: grid;
+    grid-row-gap: 2em;
+  }
+  .main .img-row-medium #move-down {
+    margin-top: 2pt;
+  }
+  .main .img-row-medium #snowden {
+    max-width: 94%;
+    min-height: 78%;
+  }
+  .main .img-row-medium #snowden-caption {
+    width: 84%;
   }
   #footer-flex {
     display: -webkit-box;
