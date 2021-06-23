@@ -76,6 +76,21 @@ h3 {
   margin: 2em 0 3em 0;
 }
 
+.main .caption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-color: #0E0D0D;
+  color: #F6F5F5;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -134,11 +149,9 @@ a {
     /* for centering */
   }
   .caption {
-    text-align: center;
-    background-color: #0E0D0D;
-    color: #F6F5F5;
     margin: 0;
-    padding: 3em 2em 3em 2em;
+    padding: 1em;
+    height: 3em;
   }
   #date {
     display: none;
@@ -152,6 +165,7 @@ a {
   .main img {
     max-width: 100%;
     margin-top: 2em;
+    margin-bottom: -1em;
   }
   .main .img-row {
     display: -ms-grid;
@@ -226,18 +240,8 @@ a {
     margin-bottom: -4pt;
   }
   .main .img-row .caption {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    background-color: #0E0D0D;
-    color: #F6F5F5;
     width: 80%;
+    height: 3em;
     padding: 5%;
     margin: 0;
   }
@@ -333,24 +337,15 @@ a {
     margin-bottom: -4pt;
   }
   .main .img-row .caption {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    background-color: #0E0D0D;
-    color: #F6F5F5;
     width: 80%;
-    min-height: 22%;
+    height: 5em;
     padding: 5%;
     margin: 0;
   }
   .main .img-row #musk {
-    min-height: 76%;
+    height: 12em;
+    width: -moz-max-content;
+    width: -webkit-min-content;
   }
   .main .img-row-medium {
     display: -ms-grid;
@@ -361,11 +356,9 @@ a {
     margin-top: 2pt;
   }
   .main .img-row-medium #snowden {
-    max-width: 94%;
-    min-height: 78%;
-  }
-  .main .img-row-medium #snowden-caption {
-    width: 84%;
+    width: -moz-max-content;
+    width: -webkit-min-content;
+    min-height: 17em;
   }
   #footer-flex {
     display: -webkit-box;

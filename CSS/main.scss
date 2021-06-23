@@ -61,14 +61,20 @@ h3{
 .main{
     margin-left: auto;
     margin-right: auto;
-    // img{
-    //     margin-bottom: -1em; /*otherwise there is a gap between img and text */
-    // }
 
     .center-img{
         display:flex;
         justify-content: center;
         margin: 2em 0 3em 0;
+    }
+
+    .caption{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: $menu-color;
+        color: $white-font-color;
     }
 }
 
@@ -129,11 +135,9 @@ a{
     }
 
     .caption{
-        text-align: center;
-        background-color: $menu-color;
-        color: $white-font-color;
         margin: 0;
-        padding: 3em 2em 3em 2em;
+        padding: 1em;
+        height: 3em;
     }
 
     #date{
@@ -150,6 +154,7 @@ a{
         img{
             max-width: 100%;
             margin-top: 2em;
+            margin-bottom: -1em;
         }
     
         .img-row{
@@ -224,12 +229,8 @@ a{
             }
 
             .caption{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: $menu-color;
-                color: $white-font-color;
                 width: 80%;
+                height: 3em;
                 padding: 5%;
                 margin: 0;
             }
@@ -312,19 +313,16 @@ a{
             }
 
             .caption{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: $menu-color;
-                color: $white-font-color;
                 width: 80%;
-                min-height:22%;
+                height: 5em;
                 padding: 5%;
                 margin:0;
             }
 
             #musk{
-                min-height: 76%;
+                height: 12em;
+                width: -moz-max-content;
+                width: -webkit-min-content;
             }
 
         }
@@ -339,12 +337,9 @@ a{
         }
 
         #snowden{
-            max-width: 94%;
-            min-height: 78%;
-        }
-
-        #snowden-caption{
-            width: 84%;
+            width: -moz-max-content;
+            width: -webkit-min-content;
+            min-height: 17em;
         }
     }
     }
